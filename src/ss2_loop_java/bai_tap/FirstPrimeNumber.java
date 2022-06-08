@@ -3,17 +3,17 @@ package ss2_loop_java.bai_tap;
 import java.util.Scanner;
 
 public class FirstPrimeNumber {
-    public static boolean kiemTraSoNguyenTo(int n) {
+    public static boolean primeNumberCheck(int n) {
         boolean check = false;
-        int dem = 0;
+        int count = 0;
         if (n > 1) {
             for (int i = 2; i < n; i++) {
                 if (n % i == 0) {
-                    dem++;
+                    count++;
                     break;
                 }
             }
-            if (dem == 0) {
+            if (count == 0) {
                 check = true;
             }
         }
@@ -23,24 +23,24 @@ public class FirstPrimeNumber {
     public static void main(String[] args) {
 
         Scanner scn = new Scanner(System.in);
-        int soLuong;
+        int amount;
         int count;
-        int songuyento;
+        int primeNumber;
         count = 1;
-        songuyento = 2;
-        int chon;
+        primeNumber = 2;
+        int choose;
         do {
             System.out.println("Nhập số lượng số nguyên tố");
-            soLuong = scn.nextInt();
-            while (count <= soLuong){
-                if (kiemTraSoNguyenTo(songuyento)) {
-                    System.out.println(count + ". " + songuyento);
+            amount = scn.nextInt();
+            while (count <= amount){
+                if (primeNumberCheck(primeNumber)) {
+                    System.out.println(count + ". " + primeNumber);
                     count++;
                 }
-                songuyento++;
+                primeNumber++;
             }
             System.out.println("Bạn có muốn tiếp tục?\n 1.YES  2.NO");
-            chon = scn.nextInt();
-        } while (chon!=2);
+            choose = scn.nextInt();
+        } while (choose!=2);
     }
 }
