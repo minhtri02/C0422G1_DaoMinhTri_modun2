@@ -111,7 +111,6 @@ public class ReadNumberChar {
         return str;
     }
 
-
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Đọc số từ 0-999");
