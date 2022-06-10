@@ -69,13 +69,13 @@ public class QuadraticEquation {
         System.out.println("Nhập c:");
         double c = scn.nextDouble();
         QuadraticEquation bac2 = new QuadraticEquation(a, b, c);
-        if (bac2.checkDiscriminant()){
+        if (bac2.checkDiscriminant()) {
             System.out.println("Phương trình có 2 nghiệm");
-            System.out.println("x1 = "+bac2.getRoot1());
-            System.out.println("x2 = "+bac2.getRoot2());
-        }else if (bac2.getDiscriminant()==0){
-            System.out.print("Phương trình có 1 nghiệm kép: "+bac2.getRoot1());
-        }else {
+            System.out.println("x1 = " + bac2.getRoot1());
+            System.out.println("x2 = " + bac2.getRoot2());
+        } else if (bac2.getDiscriminant() == 0) {
+            System.out.print("Phương trình có 1 nghiệm kép: " + bac2.getRoot1());
+        } else {
             System.out.println("Phương trình vô nghiệm");
         }
         System.out.println(bac2.toString());
