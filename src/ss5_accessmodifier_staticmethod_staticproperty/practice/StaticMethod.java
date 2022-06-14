@@ -5,6 +5,18 @@ public class StaticMethod {
     private String name;
     private static String truong ="ABCDE";
 
+    public int getId() {
+        return id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public static String getTruong() {
+        return truong;
+    }
+
     public StaticMethod(int id, String name) {
         this.id = id;
         this.name = name;
