@@ -1,7 +1,8 @@
 package ss5_accessmodifier_staticmethod_staticproperty.exercise.student_managerment;
 
 public class Student {
-    private int id;
+    protected static int count;
+    private  int id;
     private String name;
     private String address;
     private boolean gender;
@@ -10,31 +11,43 @@ public class Student {
 
     public Student() {
     }
-    public Student(int id, String name, String address, boolean gender, String email, String school) {
-        this.id = id;
+    public Student(String name, String address, boolean gender, String email, String school) {
+//        Student.id = id;
+        count++;
+        this.id=count;
         this.name = name;
         this.address = address;
         this.gender = gender;
         this.email = email;
         this.school = school;
     }
-    public Student(int id, String name, String address, boolean gender, String email) {
-        this.id = id;
+    public Student( String name, String address, boolean gender, String email) {
+//        this.id = id;
+        count++;
+        this.id=count;
         this.name = name;
         this.address = address;
         this.gender = gender;
         this.email = email;
     }
 
+    public static int getCount() {
+        return count;
+    }
+
+    public static void setCount(int count) {
+        Student.count = count;
+    }
+
     public int getId() {
         return id;
     }
 
-    public void setId(int id) {
-        if (id>0){
-            this.id = id;
-        }
-    }
+//    public void setId(int id) {
+//        if (id>0){
+//            this.id = id;
+//        }
+//    }
 
     public String getName() {
         return name;

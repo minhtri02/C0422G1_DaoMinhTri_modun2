@@ -1,5 +1,6 @@
 package ss5_accessmodifier_staticmethod_staticproperty.exercise.student_managerment;
 
+import java.util.Arrays;
 import java.util.Objects;
 import java.util.Scanner;
 
@@ -8,10 +9,10 @@ public class StudentManagerment {
     static Student[] students = new Student[100];
 
     static {
-        students[0] = new Student(1, "tri", "QN", false, "tâmđù");
-        students[1] = new Student(2, "tri", "QN", false, "tâmđù");
-        students[2] = new Student(3, "tri", "QN", false, "tâmđù");
-        students[3] = new Student(4, "huyen", "QN", false, "tâmđù");
+        students[0] = new Student( "tri", "QN", false, "tâmđù");
+        students[1] = new Student("tri", "QN", false, "tâmđù");
+        students[2] = new Student( "tri", "QN", false, "tâmđù");
+        students[3] = new Student("huyen", "QN", false, "tâmđù");
     }
 
     public void display() {
@@ -24,8 +25,8 @@ public class StudentManagerment {
         }
     }
     public void add(){
-        System.out.println("nhập id");
-        int id = Integer.parseInt(scanner.nextLine());
+//        System.out.println("nhập id");
+//        int id = Integer.parseInt(scanner.nextLine());
         System.out.println("nhập tên");
         String name = scanner.nextLine();
         System.out.println("nhập địa chỉ");
@@ -34,7 +35,7 @@ public class StudentManagerment {
         boolean gender = Boolean.parseBoolean(scanner.nextLine());
         System.out.println("nhập email");
         String email = scanner.nextLine();
-        Student student = new Student(id,name,address,gender,email);
+        Student student = new Student(name,address,gender,email);
         for (int i = 0; i <students.length ; i++) {
             if (students[i]==null){
                 students[i]=student;
@@ -51,6 +52,7 @@ public class StudentManagerment {
             System.out.println("không có học sinh ở vị trí "+index);
         }else {
             students[index]=null;
+
             for (int i = index; i < students.length; i++) {
                 students[i]=students[i+1];
                 if (students[i]==null){
@@ -64,8 +66,8 @@ public class StudentManagerment {
     public void edit(){
         System.out.println("Bạn muốn sửa hs học sinh thứ mấy:");
         int index = Integer.parseInt(scanner.nextLine());
-        System.out.println("nhập id");
-        int id = Integer.parseInt(scanner.nextLine());
+//        System.out.println("nhập id");
+//        int id = Integer.parseInt(scanner.nextLine());
         System.out.println("nhập tên");
         String name = scanner.nextLine();
         System.out.println("nhập địa chỉ");
@@ -74,7 +76,7 @@ public class StudentManagerment {
         boolean gender = Boolean.parseBoolean(scanner.nextLine());
         System.out.println("nhập email");
         String email = scanner.nextLine();
-        students[index] = new Student(id,name,address,gender,email);
+        students[index] = new Student(name,address,gender,email);
         display();
     }
 
