@@ -37,11 +37,11 @@ public class Circle {
         return "Circle{" +
                 "color='" + color + '\'' +
                 ", radius=" + radius +
-                ", Arae: "+Arae()+
+                ", Arae: "+ getArea()+
                 '}';
     }
 
-    public double Arae(){
+    public double getArea(){
         return this.radius*this.radius*Math.PI;
     }
 }

@@ -10,8 +10,8 @@ public class Run {
         System.out.println(cylinder);
         System.out.println(cylinder1);
         System.out.println(cylinder.volume());
-        System.out.println(cylinder.Arae());
-        System.out.println(cylinder1.Arae());
+        System.out.println(cylinder.getArea());
+        System.out.println(cylinder1.getArea());
         System.out.println(cylinder1);
 
     }

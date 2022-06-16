@@ -1,41 +1,41 @@
 package ss6_inheritance.exercise.circle_cylinder;
 
 public class Cylinder extends Circle {
-    private double hight;
+    private double height;
 
     public Cylinder() {
     }
 
     public Cylinder(double hight) {
-        this.hight = hight;
+        this.height = hight;
     }
 
     public Cylinder(double radius, double hight) {
         super(radius);
-        this.hight = hight;
+        this.height = hight;
     }
 
     public Cylinder(String color, double radius, double hight) {
         super(color, radius);
-        this.hight = hight;
+        this.height = hight;
     }
 
-    public double getHight() {
-        return hight;
+    public double getHeight() {
+        return height;
     }
 
-    public void setHight(double hight) {
-        this.hight = hight;
+    public void setHeight(double height) {
+        this.height = height;
     }
 
     public double volume() {
-        return this.getRadius()*this.getRadius()*Math.PI*this.hight;
+        return this.getRadius()*this.getRadius()*Math.PI*this.height;
     }
 
     @Override
     public String toString() {
         return "Cylinder{" +
-                "hight=" + hight +
+                "hight=" + height +
                 ", " + super.toString() +
                 ", volume: "+volume()+
                 '}';
