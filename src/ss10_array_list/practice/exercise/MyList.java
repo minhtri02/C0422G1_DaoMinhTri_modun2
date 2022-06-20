@@ -5,19 +5,24 @@ import java.util.Arrays;
 
 public class MyList<E> {
     public static void main(String[] args) {
-        MyList<Integer> myList = new MyList<>();
-        myList.add(1);
-        myList.add(2);
-        myList.add(3);
-        myList.add(4);
-        myList.add(5);
-
-//        myList.remove(2);
-        myList.add(2,3);
-
-        System.out.println(Arrays.toString(myList.elements));
+//        MyList<Integer> myList = new MyList<>();
+//        myList.add(1);
+//        myList.add(2);
+//        myList.add(3);
+//        myList.add(4);
+//        myList.add(5);
+//
+////        myList.remove(2);
+//        myList.add(2,3);
+//
+//        System.out.println(Arrays.toString(myList.elements));
 
 //        System.out.println(myList.toArray());
+        ArrayList<Integer> integers = new ArrayList<>();
+        integers.add(3);
+        integers.add(3);
+        integers.add(3);
+        System.out.println(integers);
     }
     private int size ;
     static final int DEFAULT_CAPACITY =10;
