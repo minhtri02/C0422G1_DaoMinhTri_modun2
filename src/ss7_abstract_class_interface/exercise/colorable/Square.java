@@ -4,7 +4,7 @@ package ss7_abstract_class_interface.exercise.colorable;
 
 import ss7_abstract_class_interface.exercise.resizeable.Rectangle;
 
-public class Square extends Rectangle implements Colorable{
+public class Square extends Rectangle implements Colorable {
     public Square(double size) {
         super(size,size);
     }
