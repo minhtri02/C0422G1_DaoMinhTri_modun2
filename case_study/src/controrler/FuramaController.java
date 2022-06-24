@@ -54,7 +54,8 @@ public class FuramaController {
                     "\n1. Display list employees" +
                     "\n2. Add new employee" +
                     "\n3. Edit employee" +
-                    "\n4. Return main menu");
+                    "\n4. Remove employee" +
+                    "\n5. Return main menu");
             int choose = scanner.nextInt();
             switch (choose){
                 case 1:
@@ -64,8 +65,12 @@ public class FuramaController {
                     employeeService.Add();
                     break;
                 case 3:
+                    employeeService.Edit();
                     break;
                 case 4:
+                    employeeService.Remove();
+                    break;
+                case 5:
                     flag =false;
                     displayMainMenu();
                     break;
@@ -174,7 +179,7 @@ public class FuramaController {
                     displayMainMenu();
                     break;
                 default:
-                    System.out.println("Sai cúu pháp!");
+                    System.out.println("Sai cú pháp!");
             }
         }while (flag);
     }
