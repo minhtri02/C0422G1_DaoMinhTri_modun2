@@ -1,16 +1,17 @@
 package controrler;
 
 import model.Employee;
+import service.CustomerServiceImpl;
 import service.EmployeeServiceImpl;
 
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.Scanner;
 
 public class FuramaController {
     static Scanner scanner = new Scanner(System.in);
     static ArrayList<Employee> employees = new ArrayList<>();
     static EmployeeServiceImpl employeeService = new EmployeeServiceImpl();
+    static CustomerServiceImpl customerService = new CustomerServiceImpl();
     public static void displayMainMenu(){
         boolean flag=true;
         do {
@@ -24,13 +25,13 @@ public class FuramaController {
             int choose = scanner.nextInt();
             switch (choose){
                 case 1:
-                    EmployeeManagerment();
+                    employeeManagerment();
                     break;
                 case 2:
                     CustomerManagerment();
                     break;
                 case 3:
-                    FacilityManagerment();
+                    facilityManagerment();
                     break;
                 case 4:
                     BookingManagerrment();
@@ -47,7 +48,7 @@ public class FuramaController {
             }
         }while (flag);
     }
-    private static void EmployeeManagerment(){
+    private static void employeeManagerment(){
         boolean flag = true;
         do {
             System.out.println("Employee Managerment:" +
@@ -91,10 +92,13 @@ public class FuramaController {
             int choose = scanner.nextInt();
             switch (choose){
                 case 1:
+                    customerService.display();
                     break;
                 case 2:
+                    customerService.Add();
                     break;
                 case 3:
+                    customerService.Edit();
                     break;
                 case 4:
                     flag = false;
@@ -105,7 +109,7 @@ public class FuramaController {
             }
         }while (flag);
     }
-    private static void FacilityManagerment(){
+    private static void facilityManagerment(){
         boolean flag = true;
         do {
             System.out.println("Facility Managerment:" +

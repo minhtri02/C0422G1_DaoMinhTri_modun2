@@ -1,7 +1,6 @@
 package model;
 
 import java.util.ArrayList;
-import java.util.Date;
 
 public class Customer extends Person{
     private String loaiKhach;

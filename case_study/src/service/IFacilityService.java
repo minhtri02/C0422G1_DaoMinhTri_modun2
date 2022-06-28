@@ -1,5 +1,9 @@
 package service;
 
-public interface IFacilityService extends IService{
-
+public interface IFacilityService{
+    public void display();
+    public void displayMaintain();
+    public void addNewVilla();
+    public void addNewHouse();
+    public void addNewRoom();
 }
