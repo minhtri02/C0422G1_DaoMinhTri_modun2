@@ -58,6 +58,11 @@ public class Customer extends Person{
     }
 
     @Override
+    public String getInfoToString() {
+        return super.getInfoToString()+","+loaiKhach+","+diaChi;
+    }
+
+    @Override
     public String toString() {
         return "Customer{" +
                 ", loaiKhach='" + loaiKhach + '\'' +

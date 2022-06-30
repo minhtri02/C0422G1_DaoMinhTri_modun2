@@ -79,7 +79,10 @@ public abstract class Person {
     public void setEmail(String email) {
         this.email = email;
     }
-
+    public String getInfoToString(){
+        return
+                id +","+ name+","+ngaySinh +","+gioiTinh +","+ cmnd+","+ sdt +","+ email ;
+    }
     @Override
     public String toString() {
         return "Person{" +
