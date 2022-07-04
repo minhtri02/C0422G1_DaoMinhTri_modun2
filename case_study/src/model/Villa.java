@@ -8,8 +8,8 @@ public class Villa extends Facility{
     public Villa() {
     }
 
-    public Villa(String nameFacility, double dienTichSuDung, double chiPhiThue, int soNguoiToiDa, int kieuThue, String tieuChuanPhong, double dienTichHoBoi, int soTang) {
-        super(nameFacility, dienTichSuDung, chiPhiThue, soNguoiToiDa, kieuThue);
+    public Villa(String idFacility,String nameFacility, double dienTichSuDung, double chiPhiThue, int soNguoiToiDa, int kieuThue, String tieuChuanPhong, double dienTichHoBoi, int soTang) {
+        super(idFacility,nameFacility, dienTichSuDung, chiPhiThue, soNguoiToiDa, kieuThue);
         this.tieuChuanPhong = tieuChuanPhong;
         this.dienTichHoBoi = dienTichHoBoi;
         this.soTang = soTang;
@@ -40,8 +40,13 @@ public class Villa extends Facility{
     }
 
     @Override
+    public String getInForToString() {
+        return super.getInForToString()+","+tieuChuanPhong+","+dienTichHoBoi+","+soTang;
+    }
+
+    @Override
     public String toString() {
-        return "Villa{" +
+        return "Villa{" +super.toString()+
                 "tieuChuanPhong='" + tieuChuanPhong + '\'' +
                 ", dienTichHoBoi=" + dienTichHoBoi +
                 ", soTang=" + soTang +

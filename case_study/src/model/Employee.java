@@ -28,7 +28,8 @@ public class Employee extends Person {
     public Employee() {
     }
 
-    public Employee(String id, String name, String ngaySinh, int gioiTinh, int cmnd, int sdt, String email, String tringDo, String viTri, double luong) {
+    public Employee(String id, String name, String ngaySinh, String gioiTinh,
+                    int cmnd, int sdt, String email, String tringDo, String viTri, double luong) {
         super(id, name, ngaySinh, gioiTinh, cmnd, sdt, email);
         this.tringDo = tringDo;
         this.viTri = viTri;
@@ -73,6 +74,11 @@ public class Employee extends Person {
 
     public static void setListTringDo(ArrayList<String> listTringDo) {
         Employee.listTringDo = listTringDo;
+    }
+
+    @Override
+    public String getInfoToString() {
+        return super.getInfoToString()+","+tringDo+","+viTri+","+luong;
     }
 
     @Override

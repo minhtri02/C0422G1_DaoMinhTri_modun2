@@ -6,7 +6,7 @@ public abstract class Person {
     private String id;
     private String name;
     private String ngaySinh;
-    private int gioiTinh;
+    private String gioiTinh;
     private int cmnd;
     private int sdt;
     private String email;
@@ -14,7 +14,7 @@ public abstract class Person {
     public Person() {
     }
 
-    public Person(String id, String name, String ngaySinh, int gioiTinh, int cmnd, int sdt, String email) {
+    public Person(String id, String name, String ngaySinh, String gioiTinh, int cmnd, int sdt, String email) {
         this.id = id;
         this.name = name;
         this.ngaySinh = ngaySinh;
@@ -48,11 +48,11 @@ public abstract class Person {
         this.ngaySinh = ngaySinh;
     }
 
-    public int getGioiTinh() {
+    public String getGioiTinh() {
         return gioiTinh;
     }
 
-    public void setGioiTinh(int gioiTinh) {
+    public void setGioiTinh(String gioiTinh) {
         this.gioiTinh = gioiTinh;
     }
 

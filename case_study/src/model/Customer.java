@@ -2,11 +2,12 @@ package model;
 
 import java.util.ArrayList;
 
-public class Customer extends Person{
+public class Customer extends Person {
     private String loaiKhach;
     private String diaChi;
 
     static ArrayList<String> listLoaiKhach = new ArrayList<>();
+
     static {
         listLoaiKhach.add("Diamond");
         listLoaiKhach.add("Platinium");
@@ -18,19 +19,18 @@ public class Customer extends Person{
     public Customer() {
     }
 
-    public Customer( String loaiKhach, String diaChi) {
+    public Customer(String loaiKhach, String diaChi) {
 
         this.loaiKhach = loaiKhach;
         this.diaChi = diaChi;
     }
 
-    public Customer(String id, String name, String ngaySinh, int gioiTinh, int cmnd, int sdt, String email, String loaiKhach, String diaChi) {
+    public Customer(String id, String name, String ngaySinh, String gioiTinh, int cmnd, int sdt, String email, String loaiKhach, String diaChi) {
         super(id, name, ngaySinh, gioiTinh, cmnd, sdt, email);
 
         this.loaiKhach = loaiKhach;
         this.diaChi = diaChi;
     }
-
 
 
     public String getLoaiKhach() {
@@ -59,12 +59,13 @@ public class Customer extends Person{
 
     @Override
     public String getInfoToString() {
-        return super.getInfoToString()+","+loaiKhach+","+diaChi;
+        return super.getInfoToString() + "," + loaiKhach + "," + diaChi;
     }
 
     @Override
     public String toString() {
         return "Customer{" +
+                super.toString() +
                 ", loaiKhach='" + loaiKhach + '\'' +
                 ", diaChi='" + diaChi + '\'' +
                 '}';

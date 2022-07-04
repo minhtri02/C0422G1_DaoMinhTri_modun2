@@ -1,6 +1,7 @@
 package model;
 
 public abstract class Facility {
+    private String idFacility;
     private String nameFacility;
     private double dienTichSuDung;
     private double chiPhiThue;
@@ -10,12 +11,21 @@ public abstract class Facility {
     public Facility() {
     }
 
-    public Facility(String nameFacility, double dienTichSuDung, double chiPhiThue, int soNguoiToiDa, int kieuThue) {
+    public Facility(String idFacility, String nameFacility, double dienTichSuDung, double chiPhiThue, int soNguoiToiDa, int kieuThue) {
+        this.idFacility = idFacility;
         this.nameFacility = nameFacility;
         this.dienTichSuDung = dienTichSuDung;
         this.chiPhiThue = chiPhiThue;
         this.soNguoiToiDa = soNguoiToiDa;
         this.kieuThue = kieuThue;
+    }
+
+    public String getIdFacility() {
+        return idFacility;
+    }
+
+    public void setIdFacility(String idFacility) {
+        this.idFacility = idFacility;
     }
 
     public String getNameFacility() {
@@ -58,10 +68,15 @@ public abstract class Facility {
         this.kieuThue = kieuThue;
     }
 
+    public String getInForToString() {
+        return idFacility + "," + nameFacility + "," + dienTichSuDung + "," + chiPhiThue + "," + soNguoiToiDa + "," + kieuThue;
+    }
+
     @Override
     public String toString() {
         return "Facility{" +
-                "nameFacility='" + nameFacility + '\'' +
+                "idFacility='" + idFacility + '\'' +
+                ", nameFacility='" + nameFacility + '\'' +
                 ", dienTichSuDung=" + dienTichSuDung +
                 ", chiPhiThue=" + chiPhiThue +
                 ", soNguoiToiDa=" + soNguoiToiDa +
